@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #0F0F0F;
+}
+i{
+color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+
+#icon-logo {
+    display: flex;
+}
+
+#icon-logo svg {
+    width: 10rem;
+height: 1.5rem;
+fill: white;
+}
+
+#center-nav {
+    display: flex;
+}
+
+#right-side-nav {
+    gap: 1rem;
+    align-items: center;
+    display: flex;
+}
