@@ -1,46 +1,244 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #0F0F0F;
 }
 
 main {
-    width: 100%;
-    height: 100%;
-    background-color: #0F0F0F;
-}
-i{
-color: white;
+  color: white;
+  width: 100%;
 }
 
+/* ICONS */
+i {
+  color: white;
+  cursor: pointer;
+}
+
+.Home-icons svg{
+  width: 50px;
+  height: auto;
+}
+
+/* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: .5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
 }
 
-#icon-logo {
-    display: flex;
+/* LEFT NAV */
+#left-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-#icon-logo svg {
-    width: 10rem;
-height: 1.5rem;
-fill: white;
+#left-nav i {
+  font-size: 1.4rem;
 }
 
+#left-nav svg {
+  width: 100px;
+  height: auto;
+  fill: white;
+}
+
+/* CENTER NAV */
 #center-nav {
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
+/* SEARCH CONTAINER */
+#input-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #303030;
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+#input-container input {
+  width: 35rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-size: 0.95rem;
+}
+
+#input-container input::placeholder {
+  color: #aaa;
+}
+
+/* SEARCH ICON */
+#input-container i {
+  padding: 0.6rem 1.2rem;
+  background-color: hsla(0, 0%, 100%, 0.08);
+  border-left: 1px solid #303030;
+}
+
+/* MIC BUTTON */
+#mic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsla(0, 0%, 100%, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ri-mic-line {
+  font-size: 1.3rem;
+}
+
+/* RIGHT NAV */
 #right-side-nav {
-    gap: 1rem;
-    align-items: center;
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* CREATE BUTTON */
+#Create {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: hsla(0, 0%, 100%, 0.08);
+  color: white;
+  cursor: pointer;
+}
+
+#Create h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* BELL BUTTON */
+#Bell-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* PROFILE */
+#profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Filter */
+
+.section-1-filter-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.left-icon-bar{
+  display: inline-flex;
+  width: fit-content;
+  flex-direction: column;
+}
+
+.Home-icons{
+  display: inline;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  padding: .5rem 1rem 0rem 1rem;
+}
+
+.filters h3 {
+  padding: .7rem 1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #303030;
+}
+
+
+
+/* ========================= */
+/* 📱 RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  #input-container input {
+    width: 20rem;
+  }
+
+  #Create h3 {
+    display: none;
+    /* Hide Create text */
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  #input-container input {
+    width: 12rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  /* Hide full search bar */
+  #input-container input {
+    display: none;
+  }
+
+  #input-container {
+    border: none;
+  }
+
+  #input-container i {
+    background: transparent;
+    border: none;
+  }
+
+  /* Hide Create button completely */
+  #Create {
+    display: none;
+  }
+
+  /* Reduce gaps */
+  #right-side-nav {
+    gap: 0.6rem;
+  }
+
+  #left-nav svg {
+    width: 80px;
+  }
 }
